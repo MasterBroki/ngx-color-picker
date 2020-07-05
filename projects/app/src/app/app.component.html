@@ -7,17 +7,26 @@
 
   <div class="row">
     <div class="col-md-5">
-      <input [style.background]="color1" [(colorPicker)]="color1" (colorPickerOpen)="onEventLog('colorPickerOpen', $event)" (colorPickerClose)="onEventLog('colorPickerClose', $event)" (cpInputChange)="onEventLog('cpInputChange', $event)" (cpSliderDragStart)="onEventLog('cpSliderDragStart', $event)" (cpSliderDragEnd)="onEventLog('cpSliderDragEnd', $event)"/>
+        <mat-card>
+            <mat-card-content>
+                <input [style.background]="color1" [(colorPicker)]="color1"
+                       (colorPickerOpen)="onEventLog('colorPickerOpen', $event)"
+                       (colorPickerClose)="onEventLog('colorPickerClose', $event)"
+                       (cpInputChange)="onEventLog('cpInputChange', $event)"
+                       (cpSliderDragStart)="onEventLog('cpSliderDragStart', $event)"
+                       (cpSliderDragEnd)="onEventLog('cpSliderDragEnd', $event)"/>
+            </mat-card-content>
+        </mat-card>
     </div>
 
     <div class="col-md-7">
-      <p>Usage:</p>
-      <pre>
+                <p>Usage:</p>
+                <pre>
 &lt;input [(colorPicker)]="color"
        [style.background]="color"/&gt;
       </pre>
-      <p>Or:</p>
-      <pre>
+                <p>Or:</p>
+                <pre>
 &lt;input [style.background]="color"
        [colorPicker]="color"
        (colorPickerChange)="color=$event"/&gt;
